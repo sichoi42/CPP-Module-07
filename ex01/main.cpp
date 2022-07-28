@@ -6,27 +6,34 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:03:53 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/27 22:00:52 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/28 14:11:10 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
-#include <iostream>
-
-void	print(int& a)
-{
-	std::cout << a << std::endl;
-}
-
-void	print(std::string& a)
-{
-	std::cout << a << std::endl;
-}
 
 int	main(void)
 {
-	int a[5] = {4, 1, 2, 3, 5};
-	iter(a, 5, print);
+	{
+		int a[5] = {4, 1, 2, 3, 5};
+		iter(a, 5, print);
+		std::cout << "=====================================" << std::endl;
+	}
+	{
+		double a[5] = {4.2, 1.3, 2.4, 3.5, 5.3};
+		iter(a, 5, print);
+		std::cout << "=====================================" << std::endl;
+	}
+	{
+		float a[5] = {4.2f, 1.3f, 2.4f, 3.5f, 5.f};
+		iter(a, 5, print);
+		std::cout << "=====================================" << std::endl;
+	}
+	{
+		std::string a[5] = {"hello", "my", "name", "is", "sichoi"};
+		iter(a, 5, print);
+		std::cout << "=====================================" << std::endl;
+	}
 	return (0);
 }
 
