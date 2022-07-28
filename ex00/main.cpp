@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 16:26:00 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/27 16:35:41 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/28 21:47:29 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	main(void)
 		test(a, b);
 	}
 	{
-		std::string	a = "sichoi1";
-		std::string	b = "sichoi2";
-		test(a, b);
+		// std::string	a("sichoi1");
+		// std::string	b("sichoi2");
+		test(std::string("sichoi1"), std::string("sichoi1"));
 	}
 	return (0);
 }
