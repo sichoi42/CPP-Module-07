@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 15:14:53 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/28 18:22:35 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/28 19:04:50 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,12 @@ Array<T>&	Array<T>::operator=(const Array<T>& a)
 {
 	if (this != &a)
 	{
+		_size = a._size;
 		if (_elem != NULL)
 		{
 			delete[] _elem;
 			_elem = NULL;
-			_size = 0;
 		}
-		_size = a._size;
 		_elem = new T[_size];
 		for (unsigned int i = 0; i < _size; ++i)
 		{
@@ -101,8 +100,9 @@ void	test(Array<T>& arr)
 	{
 		std::cout << arr2[i] << std::endl;
 	}
+	Array<T> arr3;
+	arr3 = arr2;
 	std::cout << "==================================" << std::endl;
-	arr2 = arr;
 	for (unsigned int i = 0; i < arr2.size(); ++i)
 	{
 		std::cout << arr2[i] << std::endl;
