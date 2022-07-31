@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 16:28:48 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/28 21:54:19 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/31 16:43:23 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	test(T a, T b)
 	std::cout << "a: " << a << " b: " << b << std::endl;
 	std::cout << "min: " << tmin(a, b) << std::endl;
 	std::cout << "max: " << tmax(a, b) << std::endl;
+	std::cout << "max2: " << tmax(a + b, b) << std::endl;
 	std::cout << "min + max: " << tmin(a, b) + tmax(a, b) << std::endl;
 	std::cout << "=========================" << std::endl;
 }

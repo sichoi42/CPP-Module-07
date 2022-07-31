@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 16:26:00 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/28 21:47:29 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/31 16:42:34 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,10 @@
 
 int	main(void)
 {
-	{
-		int	a = 10;
-		int	b = 42;
-		test(a, b);
-	}
-	{
-		double a = 10.5;
-		double b = 42.42;
-		test(a, b);
-	}
-	{
-		float a = 10.5f;
-		float b = 42.42f;
-		test(a, b);
-	}
-	{
-		// std::string	a("sichoi1");
-		// std::string	b("sichoi2");
-		test(std::string("sichoi1"), std::string("sichoi1"));
-	}
+	test(10, 42);
+	test(10.5, 42.42);
+	test(10.5f, 42.42f);
+	test(std::string("sichoi1"), std::string("sichoi1"));
 	return (0);
 }
 
