@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 15:14:53 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/28 19:04:50 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/31 21:24:38 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include "Array.hpp"
 
 template <typename T>
-Array<T>::Array() : _elem(NULL), _size(1)
+Array<T>::Array() : _elem(NULL), _size(0)
 {
-	_elem = new T[1];
+	_elem = new T[0];
 	std::cout << GREEN << "Empty Array Created!" << RESET << std::endl;
 }
 
