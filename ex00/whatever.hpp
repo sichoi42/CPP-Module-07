@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 16:28:48 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/31 16:43:23 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/08/02 15:10:33 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ void	swap(T *a, T *b)
 }
 
 template <typename T>
-const T&	tmin(const T& a, const T& b)
+const T&	min(const T& a, const T& b)
 {
 	return (a < b ? a : b);
 }
 
 template <typename T>
-const T&	tmax(const T& a, const T& b)
+const T&	max(const T& a, const T& b)
 {
 	return (a > b ? a : b);
 }
@@ -53,10 +53,10 @@ void	test(T a, T b)
 	std::cout << "a: " << a << " b: " << b << std::endl;
 	swap(a, b);
 	std::cout << "a: " << a << " b: " << b << std::endl;
-	std::cout << "min: " << tmin(a, b) << std::endl;
-	std::cout << "max: " << tmax(a, b) << std::endl;
-	std::cout << "max2: " << tmax(a + b, b) << std::endl;
-	std::cout << "min + max: " << tmin(a, b) + tmax(a, b) << std::endl;
+	std::cout << "min: " << ::min(a, b) << std::endl;
+	std::cout << "max: " << ::max(a, b) << std::endl;
+	std::cout << "max2: " << ::max(a + b, b) << std::endl;
+	std::cout << "min + max: " << ::min(a, b) + ::max(a, b) << std::endl;
 	std::cout << "=========================" << std::endl;
 }
 
